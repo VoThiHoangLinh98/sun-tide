@@ -10,11 +10,11 @@
       rgba(0, 172, 255, 0.319765)
     );
   
-    .App__top {
+    &__top {
       flex: 1;
     }
   
-    .App__bottom {
+    &__bottom {
       position: relative;
       top: 0;
       left: 0;

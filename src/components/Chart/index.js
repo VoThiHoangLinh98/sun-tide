@@ -81,7 +81,7 @@ const Chart = ({ data = [] }) => {
   )
 
   return (
-    <div className="Chart__wave__container" ref={containerRef}>
+    <div className="chart__wave" ref={containerRef}>
       <svg
         data-testid="chart-svg"
         height={HEIGHT_CANVAS}
@@ -123,13 +123,13 @@ const Chart = ({ data = [] }) => {
           fill="none"
         />
       </svg>
-      <div className="Chart__wave__kim"></div>
+      <div className="chart__wave__kim"></div>
       {hiddenSun(
         (containerRef.current?.scrollLeft || 0) + WIDTH_SCREEN / 2 - 10,
         positionShadow
-      ) && <img className="Chart__wave__moon" src={`/moon.svg`} alt="moon" />}
-      <p className="Chart__wave__time">{currentTime.time}</p>
-      <p className="Chart__wave__day">Day {currentTime.day} </p>
+      ) && <img className="chart__wave__moon" src={`/moon.svg`} alt="moon" />}
+      <p className="chart__wave__time">{currentTime.time}</p>
+      <p className="chart__wave__day">Day {currentTime.day} </p>
     </div>
   )
 }

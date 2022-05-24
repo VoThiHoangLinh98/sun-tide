@@ -36,12 +36,12 @@ const Weather = () => {
   }
 
   return (
-    <div className="Weather__container">
-      <div className="Weather__top">
+    <div className="weather">
+      <div className="weather__top">
         <GiHamburgerMenu />
-        <div className="Weather__top__location">
-          <p className="Weather__top__location--p">myENV</p>
-          <p className="Weather__top__location--current">
+        <div className="weather__top__location">
+          <p className="weather__top__location--p">myENV</p>
+          <p className="weather__top__location--current">
             <select
               id="countries"
               data-testid="select-location"
@@ -64,10 +64,10 @@ const Weather = () => {
         </div>
         <IoIosNotifications />
       </div>
-      <div className="Weather__center" data-testid="info-cloud">
-        <div className="Weather__center__info">
+      <div className="weather__center" data-testid="info-cloud">
+        <div className="weather__center__info">
           <img
-            className="Weather__center__info--cloud"
+            className="weather__center__info--cloud"
             src={`https://openweathermap.org/img/wn/${weatherContry?.weather?.[0].icon}@2x.png`}
             alt="moon"
           />
@@ -75,7 +75,7 @@ const Weather = () => {
             <h1 data-testid="cloud--title" id="nguyen">
               {weatherContry?.weather?.[0]?.main}
             </h1>
-            <div className="Weather__center__info--deg">
+            <div className="weather__center__info--deg">
               <p>
                 <FaTemperatureHigh /> {weatherContry?.wind?.deg} C
               </p>
@@ -86,28 +86,28 @@ const Weather = () => {
           </div>
         </div>
       </div>
-      <div className="Weather__bottom">
-        <div className="Weather__bottom__info">
-          <div className="Weather__bottom__info--title">PSI</div>
-          <div className="Weather__bottom__info--psi">
+      <div className="weather__bottom">
+        <div className="weather__bottom__info">
+          <div className="weather__bottom__info--title">PSI</div>
+          <div className="weather__bottom__info--psi">
             {weatherContry?.main.feels_like}
           </div>
           <div>Good</div>
         </div>
-        <div className="Weather__bottom__info">
-          <div className="Weather__bottom__info--title">RAIN</div>
-          <div className="Weather__bottom__info--rain">
+        <div className="weather__bottom__info">
+          <div className="weather__bottom__info--title">RAIN</div>
+          <div className="weather__bottom__info--rain">
             {weatherContry?.main.humidity}
           </div>
           <div>mm</div>
         </div>
-        <div className="Weather__bottom__info">
-          <div className="Weather__bottom__info--title">DENGUE</div>
-          <div className="Weather__bottom__info--dengue " />
+        <div className="weather__bottom__info">
+          <div className="weather__bottom__info--title">DENGUE</div>
+          <div className="weather__bottom__info--dengue " />
         </div>
-        <div className="Weather__bottom__info">
-          <AiOutlinePlusCircle className="Weather__bottom__info--add" />
-          <div className="Weather__bottom__info--title">Add</div>
+        <div className="weather__bottom__info">
+          <AiOutlinePlusCircle className="weather__bottom__info--add" />
+          <div className="weather__bottom__info--title">Add</div>
         </div>
       </div>
     </div>
